@@ -73,7 +73,7 @@ int quiz()
 
         if (answer == questions[i].answer)
         {
-            printf("Correct!\n");
+            printf("Acertou!\n");
         }
         else if (!(answer == 'a' || answer == 'b' || answer == 'c' || answer == 'd'))
         {
@@ -191,9 +191,41 @@ int boxgame()
 }
 
 int main()
-{
-    // quiz();
+{   
+    int cond = 1;
+    while (cond == 1)
+    {   
+        int choice;
+        printf("Bem vindo aos minigames do Projeto C\n\n");
+        printf("Qual jogo você gostaria de jogar?\n");
+        printf("1) Quiz Game de Jogos\n");
+        printf("2) Jogo das caixas\n");
+        printf("3) Sair do programa\n");
 
-    boxgame();
+        scanf("%d",&choice);
+
+        switch (choice)
+        {
+        case 1:
+            quiz();
+            break;
+        case 2:
+            boxgame();
+            break;
+        case 3:
+            printf("Obrigado por usar o progama Minijogos");
+            cond = 0;
+            break;
+        
+        default:
+            printf("Opção inválida");
+            break;
+        }
+    }
+    
+
+    
+
+    
 
 } // Display the
